@@ -1,9 +1,6 @@
 package at.aimrose.service;
 
-import at.aimrose.service.commands.ChatClear;
-import at.aimrose.service.commands.Feed;
-import at.aimrose.service.commands.Fly;
-import at.aimrose.service.commands.Heal;
+import at.aimrose.service.commands.*;
 import at.aimrose.service.listner.GlobalMuteListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
@@ -37,10 +34,12 @@ public final class main extends JavaPlugin implements Listener {
 
         //Commands
         getCommand("heal").setExecutor(new Heal());
-        getCommand("feed").setExecutor(new Fly());
-        getCommand("fly").setExecutor(new Feed());
+        getCommand("feed").setExecutor(new Feed());
+        getCommand("fly").setExecutor(new Fly());
         getCommand("cc").setExecutor(new ChatClear());
         getCommand("chatclear").setExecutor(new ChatClear());
+        getCommand("msg").setExecutor(new MSG());
+        getCommand("globalmute").setExecutor(new Globalmute());
 
         //Listener
         PluginManager pm = Bukkit.getPluginManager();

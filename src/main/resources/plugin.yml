@@ -2,3 +2,19 @@ name: AimRose
 version: ${project.version}
 main: at.aimrose.service.main
 authors: [ AimRose ]
+
+commands:
+  ChatClear:
+    description: ChatClear
+  CC:
+    description: ChatClear
+  Feed:
+    description: Feed
+  Fly:
+    description: Fly
+  Globalmute:
+    description: Globalmute
+  Heal:
+    description: Heal
+  MSG:
+    description: MSG

@@ -1,0 +1,4 @@
+name: AimRose
+version: ${project.version}
+main: at.aimrose.service.main
+authors: [ AimRose ]

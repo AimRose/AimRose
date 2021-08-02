@@ -48,6 +48,8 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("globalmute").setExecutor(new Globalmute());
         getCommand("kick").setExecutor(new Kick());
         getCommand("wartung").setExecutor(new Wartung());
+        getCommand("gm").setExecutor(new Gamemode());
+        getCommand("gamemode").setExecutor(new Gamemode());
 
         //Listener
         PluginManager pm = Bukkit.getPluginManager();

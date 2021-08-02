@@ -22,3 +22,7 @@ commands:
     description: Kick
   Wartung:
     description: Wartung
+  GM:
+    description: Gamemode
+  Gamemode:
+    description: Gamemode

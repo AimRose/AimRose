@@ -21,22 +21,22 @@ public class Gamemode implements CommandExecutor {
                     if (args[0].equalsIgnoreCase("0")) {
 
                         p.setGameMode(GameMode.SURVIVAL);
-                        p.sendMessage(main.PREFIX + "§7Spielmodus §eÜberlebenmodus §7für §e" + p.getName() + "§7gesetzt.");
+                        p.sendMessage(main.PREFIX + "§7Spielmodus §eÜberlebenmodus §7für §e" + p.getName() + "§7 gesetzt.");
 
                     } else if (args[0].equalsIgnoreCase("1")) {
 
                         p.setGameMode(GameMode.CREATIVE);
-                        p.sendMessage(main.PREFIX + "§7Spielmodus §eKreativmodus §7für §e" + p.getName() + "§7gesetzt.");
+                        p.sendMessage(main.PREFIX + "§7Spielmodus §eKreativmodus §7für §e" + p.getName() + "§7 gesetzt.");
 
                     } else if (args[0].equalsIgnoreCase("2")) {
 
                         p.setGameMode(GameMode.ADVENTURE);
-                        p.sendMessage(main.PREFIX + "§7Spielmodus §eAbenteuermodus §7für §e" + p.getName() + "§7gesetzt.");
+                        p.sendMessage(main.PREFIX + "§7Spielmodus §eAbenteuermodus §7für §e" + p.getName() + "§7 gesetzt.");
 
                     } else if (args[0].equalsIgnoreCase("3")) {
 
                         p.setGameMode(GameMode.SPECTATOR);
-                        p.sendMessage(main.PREFIX + "§7Spielmodus §eZuschauermodus §7für §e" + p.getName() + "§7gesetzt.");
+                        p.sendMessage(main.PREFIX + "§7Spielmodus §eZuschauermodus §7für §e" + p.getName() + "§7 gesetzt.");
 
                     } else {
                         p.sendMessage(main.PREFIX + "§7Bentuze bitte /gm 0 | 1 | 2 | 3 [Spieler]");

@@ -48,25 +48,25 @@ public class Gamemode implements CommandExecutor {
 
                             p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eÜberlebenmodus §7gesetzt.");
                             target.setGameMode(GameMode.SURVIVAL);
-                            target.sendMessage(main.PREFIX + "§7Spielmodus §eÜberlebenmodus §7für §e" + p.getName() + "§7gesetzt.");
+                            target.sendMessage(main.PREFIX + "§7Spielmodus §eÜberlebenmodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("1")) {
 
                             p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eKreativmodus §7gesetzt.");
                             target.setGameMode(GameMode.CREATIVE);
-                            target.sendMessage(main.PREFIX + "§7Spielmodus §eKreativmodus §7für §e" + p.getName() + "§7gesetzt.");
+                            target.sendMessage(main.PREFIX + "§7Spielmodus §eKreativmodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("2")) {
 
                             p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eAbenteuermodus §7gesetzt.");
                             target.setGameMode(GameMode.ADVENTURE);
-                            target.sendMessage(main.PREFIX + "§7Spielmodus §eAbenteuermodus §7für §e" + p.getName() + "§7gesetzt.");
+                            target.sendMessage(main.PREFIX + "§7Spielmodus §eAbenteuermodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("3")) {
 
                             p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eZuschauermodus §7gesetzt.");
                             target.setGameMode(GameMode.SPECTATOR);
-                            target.sendMessage(main.PREFIX + "§7Spielmodus §eZuschauermodus §7für §e" + p.getName() + "§7gesetzt.");
+                            target.sendMessage(main.PREFIX + "§7Spielmodus §eZuschauermodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else {
                             p.sendMessage(main.PREFIX + "§7Bentuze bitte /gm 0 | 1 | 2 | 3 [Spieler]");

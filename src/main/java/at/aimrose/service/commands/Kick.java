@@ -29,8 +29,7 @@ public class Kick implements CommandExecutor {
                             sb.append(args[i]);
                         }
                         String grund = sb.toString();
-                        t.kickPlayer("§d§lAIMROSE \n\n"
-                                + "§c§lDu wurdest gekickt \n\n"
+                        t.kickPlayer("§c§lDu wurdest gekickt \n\n"
                                 + "§e§lGrund:§7 " +grund);
                         p.sendMessage(main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
                     } else {

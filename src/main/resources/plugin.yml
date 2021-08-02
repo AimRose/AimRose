@@ -26,3 +26,6 @@ commands:
     description: Gamemode
   Gamemode:
     description: Gamemode
+  Vanish:
+    description: Vanish
+

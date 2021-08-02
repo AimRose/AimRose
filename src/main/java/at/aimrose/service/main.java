@@ -50,6 +50,8 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("wartung").setExecutor(new Wartung());
         getCommand("gm").setExecutor(new Gamemode());
         getCommand("gamemode").setExecutor(new Gamemode());
+        getCommand("vanish").setExecutor(new Vanish());
+
 
         //Listener
         PluginManager pm = Bukkit.getPluginManager();

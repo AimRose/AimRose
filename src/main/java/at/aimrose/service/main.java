@@ -2,6 +2,7 @@ package at.aimrose.service;
 
 import at.aimrose.service.commands.*;
 import at.aimrose.service.listner.GlobalMuteListener;
+import at.aimrose.service.listner.JoinListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -51,6 +52,7 @@ public final class main extends JavaPlugin implements Listener {
         //Listener
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new GlobalMuteListener(), this);
+        pm.registerEvents(new JoinListener(), this);
 
 
     }

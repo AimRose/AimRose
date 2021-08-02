@@ -19,7 +19,7 @@ public class Globalmute implements CommandExecutor {
             Player p = (Player) sender;
 
             if(!(p.hasPermission("system.globalmute") || (p.hasPermission("system.*")))) {
-                p.sendMessage("§4Error§8» §7Für diesen Command brauchst du die Permission §esystem.globalmute !");
+                p.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
                 return true;
             }
             if(globalmute) {

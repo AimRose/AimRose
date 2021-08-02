@@ -29,8 +29,10 @@ public class Kick implements CommandExecutor {
                             sb.append(args[i]);
                         }
                         String grund = sb.toString();
-                        t.kickPlayer("§c§lDu wurdest gekickt \n\n"
-                                + "§e§lGrund:§7 " +grund);
+                        t.kickPlayer("§c§lGEKICKT \n\n"
+                                + "§eVon:§7 " + sender.getName() + "\n"
+                                + "§eGrund:§7" +grund);
+
                         p.sendMessage(main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
                     } else {
                         p.sendMessage(main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
@@ -52,9 +54,9 @@ public class Kick implements CommandExecutor {
                     sb.append(args[i]);
                 }
                 String grund = sb.toString();
-                t.kickPlayer("§d§lAIMROSE \n\n"
-                        + "§c§lDu wurdest gekickt \n\n"
-                        + "§e§lGrund:§7 " +grund);
+                t.kickPlayer("§c§lGEKICKT \n\n"
+                        + "§eVon:§7 " + sender.getName() + "\n"
+                        + "§eGrund:§7" +grund);
                 sender.sendMessage(main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
             } else {
                 sender.sendMessage(main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");

@@ -78,33 +78,10 @@ public final class main extends JavaPlugin implements Listener {
     }
 
 
-    //Mentation
 
-    @EventHandler
-    public void onChat(AsyncPlayerChatEvent e) {
-        Player p = e.getPlayer();
-        String msg = e.getMessage();
 
-        String[] words = msg.split(" ");
-
-        for (int i = 0; i < words.length; i++) {
-            for (Player online : Bukkit.getOnlinePlayers()) {
-                if (online.getName().equalsIgnoreCase(words[i])) {
-                    words[i] = "§b@" + online.getName() + "§r";
-                    online.playSound(online.getLocation(), Sound.BLOCK_NOTE_PLING, 3.0F, 1.0F);
-                }
-            }
-        }
-
-        String msgnew = "";
-
-        for (int j = 0; j < words.length; j++) {
-            msgnew = msgnew + words[j] + " ";
-        }
-
-        e.setMessage(msgnew);
     }
-}
+
 
 
 

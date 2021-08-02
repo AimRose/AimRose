@@ -23,24 +23,9 @@ public class Fly implements CommandExecutor {
                         player.setAllowFlight(true);
                         player.setFlying(true);
                     }
-                } else if (args.length == 1) {
-                    Player target = Bukkit.getPlayer(args[0]);
-                    if (target != null) {
-                        if (player.getAllowFlight()) {
-                            target.sendMessage(main.PREFIX + "§7Dein Flugmodus wurde deaktiviert.");
-                            target.setAllowFlight(false);
-                            target.setFlying(false);
-                            player.sendMessage(main.PREFIX + "§7Du hast den Flugmodus von §e" + target.getName() + " §7deaktiviert.");
-                        } else {
-                            target.sendMessage(main.PREFIX + "§7Dein Flugmodus wurde aktiviert.");
-                            target.setAllowFlight(true);
-                            target.setFlying(true);
-                            player.sendMessage(main.PREFIX + "§7Du hast den Flugmodus von §e" + target.getName() + " §7aktiviert.");
-                        }
-                    } else
-                        player.sendMessage(main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
+
                 } else
-                    player.sendMessage(main.PREFIX + "§7Bitte benutze /fly [Spieler].");
+                    player.sendMessage(main.PREFIX + "§7Bitte benutze /fly.");
             } else
                 player.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
         } else

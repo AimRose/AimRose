@@ -46,25 +46,25 @@ public class Gamemode implements CommandExecutor {
                     if (target != null) {
                         if (args[0].equalsIgnoreCase("0")) {
 
-                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eÜberlebenmodus §7gesetzt.");
+                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eÜberlebenmodus §7 gesetzt.");
                             target.setGameMode(GameMode.SURVIVAL);
                             target.sendMessage(main.PREFIX + "§7Spielmodus §eÜberlebenmodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("1")) {
 
-                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eKreativmodus §7gesetzt.");
+                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eKreativmodus §7 gesetzt.");
                             target.setGameMode(GameMode.CREATIVE);
                             target.sendMessage(main.PREFIX + "§7Spielmodus §eKreativmodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("2")) {
 
-                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eAbenteuermodus §7gesetzt.");
+                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eAbenteuermodus §7 gesetzt.");
                             target.setGameMode(GameMode.ADVENTURE);
                             target.sendMessage(main.PREFIX + "§7Spielmodus §eAbenteuermodus §7für §e" + target.getName() + "§7 gesetzt.");
 
                         } else if (args[0].equalsIgnoreCase("3")) {
 
-                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eZuschauermodus §7gesetzt.");
+                            p.sendMessage(main.PREFIX + "§7Du hast den Spieler §e" + target.getName() + " §7in den §eZuschauermodus §7 gesetzt.");
                             target.setGameMode(GameMode.SPECTATOR);
                             target.sendMessage(main.PREFIX + "§7Spielmodus §eZuschauermodus §7für §e" + target.getName() + "§7 gesetzt.");
 

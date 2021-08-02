@@ -3,6 +3,7 @@ package at.aimrose.service;
 import at.aimrose.service.commands.*;
 import at.aimrose.service.listner.GlobalMuteListener;
 import at.aimrose.service.listner.JoinListener;
+import at.aimrose.service.listner.MentationListener;
 import at.aimrose.service.listner.PlayerChatListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
@@ -60,6 +61,7 @@ public final class main extends JavaPlugin implements Listener {
         pm.registerEvents(new GlobalMuteListener(), this);
         pm.registerEvents(new JoinListener(), this);
         pm.registerEvents(new PlayerChatListener(), this);
+        pm.registerEvents(new MentationListener(), this);
 
 
     }

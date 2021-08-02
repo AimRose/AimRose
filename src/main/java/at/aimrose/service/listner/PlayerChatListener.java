@@ -11,27 +11,28 @@ public class PlayerChatListener implements Listener {
 
     @EventHandler
     public void onChat(AsyncPlayerChatEvent e) {
-        Player p = e.getPlayer();
+    Player p = e.getPlayer();
 
-        String Message = e.getMessage();
+    String Message = e.getMessage();
         Message.replace("%", "Prozent");
 
 
         if (e.getMessage().startsWith("@team")) {
-            if (p.hasPermission("aimrose.teamchat")) {
-                String msg = e.getMessage();
-                for (Player team : Bukkit.getOnlinePlayers()) {
-                    if (team.hasPermission("aimrose.teamchat")) {
-                        e.setCancelled(true);
-                        team.sendMessage(main.TeamPREFIX + "§7" + p.getName() + "§8»§7" + msg.replaceAll("@team", "§7"));
-                    }
+        if (p.hasPermission("aimrose.teamchat")) {
+            String msg = e.getMessage();
+            for (Player team : Bukkit.getOnlinePlayers()) {
+                if (team.hasPermission("aimrose.teamchat")) {
+                    e.setCancelled(true);
+                    team.sendMessage(main.TeamPREFIX + "§7" + p.getName() + "§8»§7" + msg.replaceAll("@team", "§7"));
                 }
-            } else {
-                e.setCancelled(true);
             }
+        } else {
+            e.setCancelled(true);
         }
-
-
     }
 
+
 }
+
+}
+

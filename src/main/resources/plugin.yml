@@ -18,3 +18,5 @@ commands:
     description: Heal
   MSG:
     description: MSG
+  Kick:
+    description: Kick

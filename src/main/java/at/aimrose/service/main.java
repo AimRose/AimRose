@@ -40,6 +40,7 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("chatclear").setExecutor(new ChatClear());
         getCommand("msg").setExecutor(new MSG());
         getCommand("globalmute").setExecutor(new Globalmute());
+        getCommand("kick").setExecutor(new Kick());
 
         //Listener
         PluginManager pm = Bukkit.getPluginManager();

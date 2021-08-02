@@ -20,3 +20,5 @@ commands:
     description: MSG
   Kick:
     description: Kick
+  Wartung:
+    description: Wartung

@@ -16,6 +16,9 @@ public final class main extends JavaPlugin implements Listener {
 
     //PREFIX
     public static String PREFIX = "§d§lAIMROSE§8» ";
+    //Wartung
+    public static boolean wartung;
+    //Main
     public static main INSTANCE;
     public Plugin plugin;
 
@@ -25,6 +28,8 @@ public final class main extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        //Config
+        Wartung.CreateConfig();
         //Plugin is enable
         log("§aaktiviert");
 
@@ -41,6 +46,7 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("msg").setExecutor(new MSG());
         getCommand("globalmute").setExecutor(new Globalmute());
         getCommand("kick").setExecutor(new Kick());
+        getCommand("wartung").setExecutor(new Wartung());
 
         //Listener
         PluginManager pm = Bukkit.getPluginManager();

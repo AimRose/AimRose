@@ -15,13 +15,11 @@ public class Feed implements CommandExecutor {
             Player player = (Player) sender;
             if (player.hasPermission("aimrose.feed") || (player.hasPermission("aimrose.*"))) {
                 if (args.length == 0) {
-                    player.setHealth(20);
                     player.setFoodLevel(20);
                     player.sendMessage(main.PREFIX + "§7Dein Hunger wurde gestillt.");
                 } else if (args.length == 1) {
                     Player target = Bukkit.getPlayer(args[0]);
                     if(target != null){
-                        target.setHealth(20);
                         target.setFoodLevel(20);
                         target.sendMessage(main.PREFIX + "§7Dein Hunger wurde gestillt.");
                         player.sendMessage(main.PREFIX + "§7Du hast den Hunger von §e" + target.getName() + " §7gestillt.");

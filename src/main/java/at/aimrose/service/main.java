@@ -3,6 +3,7 @@ package at.aimrose.service;
 import at.aimrose.service.commands.*;
 import at.aimrose.service.listner.GlobalMuteListener;
 import at.aimrose.service.listner.JoinListener;
+import at.aimrose.service.listner.PlayerChatListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -17,6 +18,7 @@ public final class main extends JavaPlugin implements Listener {
 
     //PREFIX
     public static String PREFIX = "§d§lAIMROSE§8» ";
+    public static String TeamPREFIX = "§d§lTEAM§8» ";
     //Wartung
     public static boolean wartung;
     //Main
@@ -57,6 +59,7 @@ public final class main extends JavaPlugin implements Listener {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new GlobalMuteListener(), this);
         pm.registerEvents(new JoinListener(), this);
+        pm.registerEvents(new PlayerChatListener(), this);
 
 
     }

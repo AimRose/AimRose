@@ -6,11 +6,7 @@ import at.aimrose.service.listner.JoinListener;
 import at.aimrose.service.listner.MentationListener;
 import at.aimrose.service.listner.PlayerChatListener;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,7 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class main extends JavaPlugin implements Listener {
 
     //PREFIX
-    public static String PREFIX = "§d§lAIMROSE§8» ";
+    public static String PREFIX = "§6§lNEOXSUCHT§8» ";
     public static String TeamPREFIX = "§d§lTEAM§8» ";
     //Wartung
     public static boolean wartung;
@@ -74,13 +70,12 @@ public final class main extends JavaPlugin implements Listener {
     }
 
     //ConsoleSender
-    public void log(String text) { Bukkit.getConsoleSender().sendMessage(PREFIX + text);
+    public void log(String text) {
+        Bukkit.getConsoleSender().sendMessage(PREFIX + text);
     }
 
 
-
-
-    }
+}
 
 
 

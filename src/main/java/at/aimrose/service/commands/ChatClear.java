@@ -34,7 +34,7 @@ public class ChatClear implements CommandExecutor {
 
         }else{
             //No Perms
-            p.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
+            p.sendMessage(main.PREFIX + main.NOPERMS);
         }
 
 

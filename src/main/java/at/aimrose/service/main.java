@@ -16,6 +16,7 @@ public final class main extends JavaPlugin implements Listener {
     //PREFIX
     public static String PREFIX = "§6§lNEOXSUCHT§8» ";
     public static String TeamPREFIX = "§d§lTEAM§8» ";
+    public static String NOPERMS = "§7Dazu hast du keine Rechte!";
     //Wartung
     public static boolean wartung;
     //Main

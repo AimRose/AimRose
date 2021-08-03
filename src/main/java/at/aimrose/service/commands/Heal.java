@@ -29,7 +29,7 @@ public class Heal implements CommandExecutor {
                 }else
                     player.sendMessage(main.PREFIX + "§7Bitte benutze /heal [Spieler].");
             } else
-                player.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
+                player.sendMessage(main.PREFIX + main.NOPERMS);
         } else
             sender.sendMessage("§4Du musst ein Spieler sein für diesen Command.");
 

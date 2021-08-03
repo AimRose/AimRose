@@ -41,7 +41,7 @@ public class Kick implements CommandExecutor {
 
 
             } else {
-                p.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
+                p.sendMessage(main.PREFIX + main.NOPERMS);
             }
         } else {
             Player t = Bukkit.getPlayer(args[0]);

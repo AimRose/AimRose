@@ -40,6 +40,8 @@ public class MSG implements CommandExecutor {
 
                     p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§7Bitte benutze /msg [Spieler] [Nachricht]§7.");
                 }
+            } else {
+                p.sendMessage(main.PREFIX + main.NOPERMS);
             }
         } else {
 

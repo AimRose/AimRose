@@ -41,7 +41,7 @@ public class Vanish implements CommandExecutor {
 
                     }
                 } else {
-                    p.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
+                    p.sendMessage(main.PREFIX + main.NOPERMS);
                 }
             }
 

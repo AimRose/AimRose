@@ -26,7 +26,7 @@ public class Wartung implements CommandExecutor {
                     p.sendMessage(main.PREFIX + "§7Der Wartungsmodus wurde aktiviert.");
                 }
             } else {
-                p.sendMessage(main.PREFIX + "§7Dazu hast du keine Rechte.");
+                p.sendMessage(main.PREFIX + main.NOPERMS);
             }
         } else {
             //Console

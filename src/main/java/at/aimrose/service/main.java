@@ -50,6 +50,8 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("vanish").setExecutor(new Vanish());
         getCommand("god").setExecutor(new God());
         getCommand("Clearlag").setExecutor(new ClearLag());
+        getCommand("enderchest").setExecutor(new Enderchest());
+        getCommand("ec").setExecutor(new Enderchest());
 
 
         //Listener
@@ -60,6 +62,7 @@ public final class main extends JavaPlugin implements Listener {
         pm.registerEvents(new MentationListener(), this);
         pm.registerEvents(new EntityDamageListener(), this);
         pm.registerEvents(new FoodLevelChangeListener(), this);
+        pm.registerEvents(new ChatListener(), this);
 
 
     }

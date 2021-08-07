@@ -33,3 +33,7 @@ commands:
     description: God
   ClearLag:
     description: Clearlag
+  Enderchest:
+    description: Enderchest
+  Ec:
+    description: Ec

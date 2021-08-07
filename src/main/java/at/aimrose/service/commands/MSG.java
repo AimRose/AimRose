@@ -24,8 +24,8 @@ public class MSG implements CommandExecutor {
                             msg2 = String.valueOf(msg2) + args[msg] + " ";
                         }
                         if (p != t) {
-                            t.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§c" + p.getName() + " §6-> §cDu§6]§f" + msg2);
-                            p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§cDu §6-> §c" + t.getName() + "§6]§f" + msg2);
+                            t.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§c" + p.getName() + " §6-> §cDu§6] §f" + msg2);
+                            p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§cDu §6-> §c" + t.getName() + "§6] §f" + msg2);
                         } else {
                             p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§7Du kannst dir selber nicht schreiben!");
                         }

@@ -28,4 +28,8 @@ commands:
     description: Gamemode
   Vanish:
     description: Vanish
-
+    aliases: [v]
+  God:
+    description: God
+  ClearLag:
+    description: Clearlag

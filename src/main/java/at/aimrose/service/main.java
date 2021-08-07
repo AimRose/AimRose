@@ -1,10 +1,7 @@
 package at.aimrose.service;
 
 import at.aimrose.service.commands.*;
-import at.aimrose.service.listner.GlobalMuteListener;
-import at.aimrose.service.listner.JoinListener;
-import at.aimrose.service.listner.MentationListener;
-import at.aimrose.service.listner.PlayerChatListener;
+import at.aimrose.service.listner.*;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
@@ -51,6 +48,8 @@ public final class main extends JavaPlugin implements Listener {
         getCommand("gm").setExecutor(new Gamemode());
         getCommand("gamemode").setExecutor(new Gamemode());
         getCommand("vanish").setExecutor(new Vanish());
+        getCommand("god").setExecutor(new God());
+        getCommand("Clearlag").setExecutor(new ClearLag());
 
 
         //Listener
@@ -59,6 +58,8 @@ public final class main extends JavaPlugin implements Listener {
         pm.registerEvents(new JoinListener(), this);
         pm.registerEvents(new PlayerChatListener(), this);
         pm.registerEvents(new MentationListener(), this);
+        pm.registerEvents(new EntityDamageListener(), this);
+        pm.registerEvents(new FoodLevelChangeListener(), this);
 
 
     }

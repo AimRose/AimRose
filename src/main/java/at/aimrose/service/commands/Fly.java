@@ -1,11 +1,10 @@
 package at.aimrose.service.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 
 public class Fly implements CommandExecutor {
     @Override
@@ -15,19 +14,19 @@ public class Fly implements CommandExecutor {
             if (player.hasPermission("aimrose.fly") || (player.hasPermission("aimrose.*"))) {
                 if (args.length == 0) {
                     if (player.getAllowFlight()) {
-                        player.sendMessage(main.PREFIX + "§7Dein Flugmodus wurde deaktiviert.");
+                        player.sendMessage(Main.PREFIX + "§7Dein Flugmodus wurde deaktiviert.");
                         player.setAllowFlight(false);
                         player.setFlying(false);
                     } else {
-                        player.sendMessage(main.PREFIX + "§7Dein Flugmodus wurde aktiviert.");
+                        player.sendMessage(Main.PREFIX + "§7Dein Flugmodus wurde aktiviert.");
                         player.setAllowFlight(true);
                         player.setFlying(true);
                     }
 
                 } else
-                    player.sendMessage(main.PREFIX + "§7Bitte benutze /fly.");
+                    player.sendMessage(Main.PREFIX + "§7Bitte benutze /fly.");
             } else
-                player.sendMessage(main.PREFIX + main.NOPERMS);
+                player.sendMessage(Main.PREFIX + Main.NOPERMS);
         } else
             sender.sendMessage("§4Du musst ein Spieler sein für diesen Command.");
 

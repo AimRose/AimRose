@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.entity.Player;
 
 public class ChatClear implements CommandExecutor {
@@ -13,7 +13,7 @@ public class ChatClear implements CommandExecutor {
 
         //Player Abfrage
         if(!(sender instanceof Player)) {
-            main.INSTANCE.log("§4Dazu musst du ein Spieler sein.");
+            Main.INSTANCE.log("§4Dazu musst du ein Spieler sein.");
             return true;
         }
 
@@ -29,12 +29,12 @@ public class ChatClear implements CommandExecutor {
                     }
                 }
             }
-            Bukkit.broadcastMessage(main.PREFIX + "§7 Der Chat wurde von §e"+ p.getName() +"§7 geleert.");
+            Bukkit.broadcastMessage(Main.PREFIX + "§7 Der Chat wurde von §e"+ p.getName() +"§7 geleert.");
             return true;
 
         }else{
             //No Perms
-            p.sendMessage(main.PREFIX + main.NOPERMS);
+            p.sendMessage(Main.PREFIX + Main.NOPERMS);
         }
 
 

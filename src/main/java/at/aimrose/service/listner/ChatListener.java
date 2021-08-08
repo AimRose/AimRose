@@ -1,6 +1,6 @@
 package at.aimrose.service.listner;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -18,7 +18,7 @@ public class ChatListener implements Listener {
         }
         if(uppercaseLetter / (float) m.length() > 0.3F) {
             e.setCancelled(true);
-            e.getPlayer().sendMessage(main.PREFIX + "§7Bitte schreibe nicht so viel in Caps!");
+            e.getPlayer().sendMessage(Main.PREFIX + "§7Bitte schreibe nicht so viel in Caps!");
         }
 
     }

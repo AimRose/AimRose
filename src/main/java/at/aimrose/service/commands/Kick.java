@@ -1,6 +1,6 @@
 package at.aimrose.service.commands;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,9 +15,9 @@ public class Kick implements CommandExecutor {
             Player p = (Player) sender;
             if (p.hasPermission("aimrose.kick")) {
                 if (args.length == 0) {
-                    p.sendMessage(main.PREFIX + "§7Bitte benutze /kick [Name] [Grund]");
+                    p.sendMessage(Main.PREFIX + "§7Bitte benutze /kick [Name] [Grund]");
                 } else if (args.length == 1) {
-                    p.sendMessage(main.PREFIX + "§7Bitte benutze /kick [Name] [Grund]");
+                    p.sendMessage(Main.PREFIX + "§7Bitte benutze /kick [Name] [Grund]");
                 } else {
                     Player t = Bukkit.getPlayer(args[0]);
                     if (t != null) {
@@ -33,15 +33,15 @@ public class Kick implements CommandExecutor {
                                 + "§eVon:§7 " + sender.getName() + "\n"
                                 + "§eGrund:§7" +grund);
 
-                        p.sendMessage(main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
+                        p.sendMessage(Main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
                     } else {
-                        p.sendMessage(main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
+                        p.sendMessage(Main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
                     }
                 }
 
 
             } else {
-                p.sendMessage(main.PREFIX + main.NOPERMS);
+                p.sendMessage(Main.PREFIX + Main.NOPERMS);
             }
         } else {
             Player t = Bukkit.getPlayer(args[0]);
@@ -57,9 +57,9 @@ public class Kick implements CommandExecutor {
                 t.kickPlayer("§c§lGEKICKT \n\n"
                         + "§eVon:§7 " + sender.getName() + "\n"
                         + "§eGrund:§7" +grund);
-                sender.sendMessage(main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
+                sender.sendMessage(Main.PREFIX + "§7Der Spieler §e" + t.getName() + " §7wurde gekickt mit dem Grund: §e" +grund);
             } else {
-                sender.sendMessage(main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
+                sender.sendMessage(Main.PREFIX + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
             }
         }
 

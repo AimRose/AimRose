@@ -1,6 +1,6 @@
 package at.aimrose.service.listner;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -23,7 +23,7 @@ public class PlayerChatListener implements Listener {
             for (Player team : Bukkit.getOnlinePlayers()) {
                 if (team.hasPermission("aimrose.teamchat")) {
                     e.setCancelled(true);
-                    team.sendMessage(main.TeamPREFIX + "§7" + p.getName() + "§8»§7" + msg.replaceAll("@team", "§7"));
+                    team.sendMessage(Main.TeamPREFIX + "§7" + p.getName() + "§8»§7" + msg.replaceAll("@team", "§7"));
                 }
             }
         } else {

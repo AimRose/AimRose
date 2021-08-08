@@ -1,6 +1,6 @@
 package at.aimrose.service.listner;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,7 +20,7 @@ public class JoinListener implements Listener {
         }
         //Wartung
 
-        if(main.wartung == true) {
+        if(Main.wartung == true) {
             if(!p.hasPermission("aimrose.wartung.join")) {
                 p.kickPlayer("§4§lDer Server hat gerade Wartungsarbeiten!");
                 return;
@@ -37,8 +37,8 @@ public class JoinListener implements Listener {
 
     @EventHandler
     public void ServerPing(ServerListPingEvent e) {
-        if(main.wartung == true) {
-            e.setMotd(main.PREFIX + "§4§lAktuell sind Wartungsarbeiten!");
+        if(Main.wartung == true) {
+            e.setMotd(Main.PREFIX + "§4§lAktuell sind Wartungsarbeiten!");
         }
 
     }

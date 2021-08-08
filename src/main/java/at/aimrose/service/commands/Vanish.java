@@ -1,6 +1,6 @@
 package at.aimrose.service.commands;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -25,7 +25,7 @@ public class Vanish implements CommandExecutor {
                 if (p.hasPermission("aimrose.vanish")) {
                     if(vanish.contains(p)) {
                         vanish.remove(p);
-                        p.sendMessage(main.PREFIX + "§7Dein §eVanishmodus §7wurde erfolgreich deaktiviert.");
+                        p.sendMessage(Main.PREFIX + "§7Dein §eVanishmodus §7wurde erfolgreich deaktiviert.");
 
                         for(Player all : Bukkit.getOnlinePlayers()){
                             all.showPlayer(p);
@@ -33,7 +33,7 @@ public class Vanish implements CommandExecutor {
 
                     }else{
                         vanish.add(p);
-                        p.sendMessage(main.PREFIX + "§7Dein §eVanishmodus §7wurde erfolgreich aktiviert.");
+                        p.sendMessage(Main.PREFIX + "§7Dein §eVanishmodus §7wurde erfolgreich aktiviert.");
 
                         for(Player all : Bukkit.getOnlinePlayers()) {
                             all.hidePlayer(p);
@@ -41,7 +41,7 @@ public class Vanish implements CommandExecutor {
 
                     }
                 } else {
-                    p.sendMessage(main.PREFIX + main.NOPERMS);
+                    p.sendMessage(Main.PREFIX + Main.NOPERMS);
                 }
             }
 

@@ -1,6 +1,6 @@
 name: AimRose
 version: ${project.version}
-main: at.aimrose.service.main
+main: at.aimrose.service.Main
 authors: [ AimRose ]
 
 commands:
@@ -29,11 +29,11 @@ commands:
   Vanish:
     description: Vanish
     aliases: [v]
-  God:
-    description: God
   ClearLag:
     description: Clearlag
   Enderchest:
     description: Enderchest
   Ec:
     description: Ec
+  Perks:
+    description: Perks

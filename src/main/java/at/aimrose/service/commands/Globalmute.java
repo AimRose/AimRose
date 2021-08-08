@@ -4,7 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 
 public class Globalmute implements CommandExecutor {
 
@@ -19,15 +19,15 @@ public class Globalmute implements CommandExecutor {
             Player p = (Player) sender;
 
             if(!(p.hasPermission("system.globalmute") || (p.hasPermission("system.*")))) {
-                p.sendMessage(main.PREFIX + main.NOPERMS);
+                p.sendMessage(Main.PREFIX + Main.NOPERMS);
                 return true;
             }
             if(globalmute) {
                 globalmute = false;
-                p.sendMessage(main.PREFIX + "§7Der Chat wurde von §e " + sender.getName() + "§7 aktiviert");
+                p.sendMessage(Main.PREFIX + "§7Der Chat wurde von §e " + sender.getName() + "§7 aktiviert");
             }else{
                 globalmute =  true;
-                p.sendMessage(main.PREFIX + "§7Der Chat wurde von §e " + sender.getName() + "§7 deaktiviert");
+                p.sendMessage(Main.PREFIX + "§7Der Chat wurde von §e " + sender.getName() + "§7 deaktiviert");
             }
 
         }

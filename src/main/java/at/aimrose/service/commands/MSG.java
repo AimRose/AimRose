@@ -5,7 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 
 public class MSG implements CommandExecutor {
     @Override
@@ -24,24 +24,24 @@ public class MSG implements CommandExecutor {
                             msg2 = String.valueOf(msg2) + args[msg] + " ";
                         }
                         if (p != t) {
-                            t.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§c" + p.getName() + " §6-> §cDu§6] §f" + msg2);
-                            p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§6[§cDu §6-> §c" + t.getName() + "§6] §f" + msg2);
+                            t.sendMessage(String.valueOf(Main.PREFIX.replaceAll("&", "§")) + "§6[§c" + p.getName() + " §6-> §cDu§6] §f" + msg2);
+                            p.sendMessage(String.valueOf(Main.PREFIX.replaceAll("&", "§")) + "§6[§cDu §6-> §c" + t.getName() + "§6] §f" + msg2);
                         } else {
-                            p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§7Du kannst dir selber nicht schreiben!");
+                            p.sendMessage(String.valueOf(Main.PREFIX.replaceAll("&", "§")) + "§7Du kannst dir selber nicht schreiben!");
                         }
                         msg2 = " ";
                     } catch (Exception e) {
 
 
-                        p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
+                        p.sendMessage(String.valueOf(Main.PREFIX.replaceAll("&", "§")) + "§7Der Spieler §e" + args[0] + " §7ist nicht online.");
                     }
 
                 } else {
 
-                    p.sendMessage(String.valueOf(main.PREFIX.replaceAll("&", "§")) + "§7Bitte benutze /msg [Spieler] [Nachricht]§7.");
+                    p.sendMessage(String.valueOf(Main.PREFIX.replaceAll("&", "§")) + "§7Bitte benutze /msg [Spieler] [Nachricht]§7.");
                 }
             } else {
-                p.sendMessage(main.PREFIX + main.NOPERMS);
+                p.sendMessage(Main.PREFIX + Main.NOPERMS);
             }
         } else {
 

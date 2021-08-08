@@ -1,6 +1,6 @@
 package at.aimrose.service.commands;
 
-import at.aimrose.service.main;
+import at.aimrose.service.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,9 +18,9 @@ public class ClearLag implements CommandExecutor {
                     entity.remove();
                 }
             }
-            sender.sendMessage(main.PREFIX + "§7Alle Gegenstände am Boden wurden entfernt.");
+            sender.sendMessage(Main.PREFIX + "§7Alle Gegenstände am Boden wurden entfernt.");
         } else {
-            sender.sendMessage(main.PREFIX + main.NOPERMS);
+            sender.sendMessage(Main.PREFIX + Main.NOPERMS);
         }
 
         return false;
